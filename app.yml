@@ -1,0 +1,8 @@
+application: pushp-ecomstore
+runtime: python
+version: 1
+api_version: 1
+
+handlers:
+-urls: .*
+script: django_bootstrap.py
