@@ -33,7 +33,7 @@ logging.getLogger().setLevel(logging.INFO)
 # Force sys.path to have our own directory first, so we can import from it.
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 # Must set this env var *before* importing any part of Django.
-os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'ecomstore.settings'
 
 # Make sure we can import Django. We may end up needing to do this
 # little dance, courtesy of Google third-party versioning hacks. Note
