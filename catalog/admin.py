@@ -1,9 +1,9 @@
 from django.contrib import admin
 from catalog.models import Product, Category
 from catalog.forms import ProductAdminForm
-from catalog.models import UserProfile
+# from catalog.models import UserProfile
 
-admin.site.register(UserProfile)
+# admin.site.register(UserProfile)
 
 
 class ProductAdmin(admin.ModelAdmin):
