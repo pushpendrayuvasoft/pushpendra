@@ -4,5 +4,5 @@ version: 1
 api_version: 1
 
 handlers:
--urls: .*
+-url: .*
 script: django_bootstrap.py
