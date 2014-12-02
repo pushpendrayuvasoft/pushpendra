@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
@@ -16,9 +17,7 @@ class Category(models.Model):
 		verbose_name_plural = 'Categories'
 	def __unicode__(self):
 		return self.name
-	@models.permalink
-	def get_absolute_url(self):
-		return ('catalog_category', (), { 'category_slug': self.slug })
+
 
 class Product(models.Model):
 	name = models.CharField(max_length=255, unique=True)
@@ -45,14 +44,25 @@ class Product(models.Model):
 	def __unicode__(self):
 		return self.name
 
-	@models.permalink
-	def get_absolute_url(self):
-		return ('catalog_product', (), { 'product_slug': self.slug })
+
 	def sale_price(self):
 		if self.old_price > self.price:
 			return self.price
 		else:
 			return None
+
+
+class UserProfile(models.Model):
+    # This line is required. Links UserProfile to a User model instance.
+    user = models.OneToOneField(User)
+
+    # The additional attributes we wish to include.
+    website = models.URLField(blank=True)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
+
+    # Override the __unicode__() method to return out something meaningful!
+    def __unicode__(self):
+        return self.user.username
 
 
 
