@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'utils',
     'cart',
     # 'django_pdb',
-    'bootstrap3',
+    # 'bootstrap3',
     'registration', 
 
 )
