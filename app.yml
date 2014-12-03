@@ -1,12 +1,12 @@
-application: pushp-ecomstore
+application: djangocomment
 runtime: python
 version: 1
 api_version: 1
 
-libraries:
-- name: MySQLdb
-  version: "latest"
-
 handlers:
-- url: .*
-  script: django_bootstrap.py
+- url: /
+ script: ecomstore.wsgi.app
+
+
+env_variables:
+ DJANGO_SETTINGS_MODULE: 'ecomstore.settings'
