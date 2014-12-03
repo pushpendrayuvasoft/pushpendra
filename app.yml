@@ -3,6 +3,10 @@ runtime: python
 version: 1
 api_version: 1
 
+libraries:
+- name: MySQLdb
+  version: "latest"
+
 handlers:
 - url: .*
   script: django_bootstrap.py
