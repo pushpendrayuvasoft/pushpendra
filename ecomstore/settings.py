@@ -83,14 +83,22 @@ WSGI_APPLICATION = 'ecomstore.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'ecomstore',
-            'USER': 'root',
-            'PASSWORD': '',
-        }
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3456'),
+       
+   }
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'ecomstore',
+#             'USER': 'root',
+#             'PASSWORD': '',
+#         }
+#     }
 
 
 # DATABASES = {
