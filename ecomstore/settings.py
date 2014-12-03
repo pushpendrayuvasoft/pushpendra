@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'ecomstore.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'django_test',
+            'NAME': 'ecomstore',
             'USER': 'root',
             'PASSWORD': '',
         }
